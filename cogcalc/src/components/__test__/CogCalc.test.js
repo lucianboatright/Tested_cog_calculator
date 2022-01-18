@@ -12,3 +12,10 @@ test("testing front cog < 50 returns 'going easy'", () => {
   const cogLarge = screen.getByTestId("front-cog-discription");
   expect(cogLarge).toHaveTextContent("Going Easy");
 });
+
+test("testing front cog > 50 returns 'Pushing Hard'", () => {
+  render(<CogCalc />);
+
+  const cogLarge = screen.getByTestId("front-cog-discription");
+  expect(cogLarge).toHaveTextContent("Pushing Hard");
+});
